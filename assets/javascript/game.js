@@ -9,5 +9,5 @@ function randomNumberFromRange(min, max){
     document.getElementById("target").innerHTML = (Math.floor(Math.random()*(max-min+1)+min));
 }
 $( ".crystal1" ).click(function() {
-  alert( "Work damnit." );
+  alert( "I think unicorns are kick ass!" );
 });
