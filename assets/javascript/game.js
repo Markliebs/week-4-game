@@ -11,3 +11,12 @@ function randomNumberFromRange(min, max){
 $( ".crystal1" ).click(function() {
   alert( "I think unicorns are kick ass!" );
 });
+$( ".crystal2" ).click(function() {
+  alert( "I think unicorns are kick ass!" );
+});
+$( ".crystal3" ).click(function() {
+  alert( "I think unicorns are kick ass!" );
+});
+$( ".crystal4" ).click(function() {
+  alert( "I think unicorns are kick ass!" );
+});
