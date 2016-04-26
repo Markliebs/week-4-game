@@ -10,8 +10,13 @@ console.log(crsValue3)
 var crsValue4 = crystalValue[Math.floor(Math.random() * crystalValue.length)];
 console.log(crsValue4);
 var yourNumber = 0
-console.log(yourNumber);
+var yourWins = 0
+var yourLosses = 0
+
 $('#player').html('<h6>' + yourNumber + '</h6>');
+$('#wins').html('<h6>' + yourWins + '</h6>');
+$('#losses').html('<h6>' + yourLosses + '</h6>');
+
 randomNumberFromRange(minNumber, maxNumber);
 
 function randomNumberFromRange(min, max) {
@@ -20,6 +25,7 @@ function randomNumberFromRange(min, max) {
 }
 
 $(".crystal1").click(function () {
+	yourNumber += crsValue1
 $('#player').html('<h6>' + crsValue1 + '</h6>');
 	//  alert( "I think unicorns are kick ass!" );
 });
