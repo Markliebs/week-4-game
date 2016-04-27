@@ -19,50 +19,61 @@ $(document).ready(function () {
 	$('#wins').html('<h6>' + yourWins + '</h6>');
 	$('#losses').html('<h6>' + yourLosses + '</h6>');
 
-	targetNumber(minNumber, maxNumber);
-
 	function targetNumber(min, max) {
-
-		document.getElementById("target").innerHTML = (Math.floor(Math.random() * (max - min + 1) + min));
-	}
-	
+		return Math.floor(Math.random() * (max - min + 1) + min);
+		
+	};
+	var randomNumber = targetNumber(19, 120);
+	$('#target').html('<h6>' + randomNumber + '</h6>');
 
 	$(".crystal1").click(function () {
-		var score1 = yourNumber += cryValue1;
-		$('#player').html('<h6>' + score1 + '</h6>');
+		yourNumber += cryValue1;
+		$('#player').html('<h6>' + yourNumber + '</h6>');
 		check()
 
 	});
 	$(".crystal2").click(function () {
-		var score2 = yourNumber += cryValue2;
-		$('#player').html('<h6>' + score2 + '</h6>');
+		yourNumber += cryValue2;
+		$('#player').html('<h6>' + yourNumber + '</h6>');
 		check()
 
 	});
 	$(".crystal3").click(function () {
-		var score3 = yourNumber += cryValue3;
-		$('#player').html('<h6>' + score3 + '</h6>');
+		yourNumber += cryValue3;
+		$('#player').html('<h6>' + yourNumber + '</h6>');
 		check()
 
 	});
 	$(".crystal4").click(function () {
-		var score4 = yourNumber += cryValue4;
-		$('#player').html('<h6>' + score4 + '</h6>');
+		yourNumber += cryValue4;
+		$('#player').html('<h6>' + yourNumber + '</h6>');
 		check()
-
 	});
-	
-	var check = function() {
-    if (targetNumber == yourNumber) {
-        wins++;
-        $('#wins').html('<h6>' + yourWins + '</h6>');
+
+	console.log(targetNumber);
+
+	var check = function () {
+		if (yourNumber == randomNumber) {
+			yourWins++;
+			$('#wins').html('<h6>' + yourWins + '</h6>');
+			alert("You Win!");
+		}
+			if (yourNumber > randomNumber) {
+			yourLosses++;
+			$('#losses').html('<h6>' + yourLosses + '</h6>');
+				alert("You Lose!");
+
+
 		}
 	}
 
-//	if (yourNumber == targetNumber) {
-//		yourWins++;
-//		$('#wins').html('<h6>' + yourWins + '</h6>');
-//
-//	}
-	
+
+
+	//Ignore this part
+	//	if (yourNumber == targetNumber) {
+	//		yourWins++;
+	//		$('#wins').html('<h6>' + yourWins + '</h6>');
+	//
+	//	}
+
 });
