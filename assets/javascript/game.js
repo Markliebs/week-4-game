@@ -1,6 +1,8 @@
 $(document).ready(function () {
 	var minNumber = 19;
 	var maxNumber = 120;
+	var audioWin = new Audio('assets/audio/winner.wav');
+	var audioLose = new Audio('assets/audio/loser.mp3');
 	cryValue1 = Math.floor((Math.random() * 12) + 1);
 	console.log(cryValue1);
 	cryValue2 = Math.floor((Math.random() * 12) + 1);
@@ -55,12 +57,14 @@ $(document).ready(function () {
 		if (yourNumber == randomNumber) {
 			yourWins++;
 			$('#wins').html('<h6>' + yourWins + '</h6>');
+			audioWin.play()
 			alert("You Win!");
 			restart();
 		}
 		if (yourNumber > randomNumber) {
 			yourLosses++;
 			$('#losses').html('<h6>' + yourLosses + '</h6>');
+			audioLose.play();
 			alert("You Lose!");
 			restart();
 
