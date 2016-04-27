@@ -1,6 +1,6 @@
 $(document).ready(function () {
-	var minNumber = 19;
-	var maxNumber = 120;
+//	var minNumber = 19;
+//	var maxNumber = 120;
 	var audioWin = new Audio('assets/audio/winner.wav');
 	var audioLose = new Audio('assets/audio/loser.mp3');
 	cryValue1 = Math.floor((Math.random() * 12) + 1);
