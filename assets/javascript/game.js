@@ -75,7 +75,7 @@ $(document).ready(function () {
 	var restart = function () {
 		yourNumber = 0;
 		$("#player").html(yourNumber);
-		randomNumber = targetNumber(19,120);
+		randomNumber = targetNumber(19, 120);
 		$('#target').html('<h6>' + randomNumber + '</h6>');
 
 
