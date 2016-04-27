@@ -1,3 +1,4 @@
+$(document).ready(function() {
 var minNumber = 19;
 var maxNumber = 120;
 var crystalValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -26,8 +27,8 @@ function randomNumberFromRange(min, max) {
 
 $(".crystal1").click(function () {
 	yourNumber += cryValue1;
-$('#player').html('<h6>' + cryValue1 + '</h6>');
-	
+	$('#player').html('<h6>' + cryValue1 + '</h6>');
+
 });
 $(".crystal2").click(function () {
 	$('#player').html('<h6>' + cryValue2 + '</h6>');
@@ -40,4 +41,5 @@ $(".crystal3").click(function () {
 $(".crystal4").click(function () {
 	$('#player').html('<h6>' + cryValue4 + '</h6>');
 
+});
 });
