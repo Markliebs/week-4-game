@@ -1,14 +1,13 @@
 $(document).ready(function () {
 	var minNumber = 19;
 	var maxNumber = 120;
-	var crystalValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-	var cryValue1 = crystalValue[Math.floor(Math.random() * crystalValue.length)];
+	cryValue1 = Math.floor((Math.random() * 12) + 1);
 	console.log(cryValue1);
-	var cryValue2 = crystalValue[Math.floor(Math.random() * crystalValue.length)];
+	cryValue2 = Math.floor((Math.random() * 12) + 1);
 	console.log(cryValue2);
-	var cryValue3 = crystalValue[Math.floor(Math.random() * crystalValue.length)];
+	cryValue3 = Math.floor((Math.random() * 12) + 1);
 	console.log(cryValue3);
-	var cryValue4 = crystalValue[Math.floor(Math.random() * crystalValue.length)];
+	cryValue4 = Math.floor((Math.random() * 12) + 1);
 	console.log(cryValue4);
 	var yourNumber = 0;
 	var yourWins = 0;
@@ -21,7 +20,7 @@ $(document).ready(function () {
 
 	function targetNumber(min, max) {
 		return Math.floor(Math.random() * (max - min + 1) + min);
-		
+
 	};
 	var randomNumber = targetNumber(19, 120);
 	$('#target').html('<h6>' + randomNumber + '</h6>');
@@ -50,30 +49,41 @@ $(document).ready(function () {
 		check()
 	});
 
-	console.log(targetNumber);
+	console.log(randomNumber);
 
 	var check = function () {
 		if (yourNumber == randomNumber) {
 			yourWins++;
 			$('#wins').html('<h6>' + yourWins + '</h6>');
 			alert("You Win!");
+			restart();
 		}
-			if (yourNumber > randomNumber) {
+		if (yourNumber > randomNumber) {
 			yourLosses++;
 			$('#losses').html('<h6>' + yourLosses + '</h6>');
-				alert("You Lose!");
+			alert("You Lose!");
+			restart();
 
 
 		}
 	}
 
+	var restart = function () {
+		yourNumber = 0;
+		$("#player").html(yourNumber);
+		randomNumber = targetNumber(19,120);
+		$('#target').html('<h6>' + randomNumber + '</h6>');
 
 
-	//Ignore this part
-	//	if (yourNumber == targetNumber) {
-	//		yourWins++;
-	//		$('#wins').html('<h6>' + yourWins + '</h6>');
-	//
-	//	}
+		cryValue1 = Math.floor((Math.random() * 12) + 1);
+		console.log(cryValue1);
+		cryValue2 = Math.floor((Math.random() * 12) + 1);
+		console.log(cryValue2);
+		cryValue3 = Math.floor((Math.random() * 12) + 1);
+		console.log(cryValue3);
+		cryValue4 = Math.floor((Math.random() * 12) + 1);
+		console.log(cryValue4);
+
+	}
 
 });
