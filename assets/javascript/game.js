@@ -26,20 +26,29 @@ function randomNumberFromRange(min, max) {
 }
 
 $(".crystal1").click(function () {
-	yourNumber += cryValue1;
-	$('#player').html('<h6>' + cryValue1 + '</h6>');
+	var score1 = yourNumber += cryValue1;
+	$('#player').html('<h6>' + score1 + '</h6>');
 
 });
 $(".crystal2").click(function () {
-	$('#player').html('<h6>' + cryValue2 + '</h6>');
+	var score2 = yourNumber += cryValue2;
+	$('#player').html('<h6>' + score2 + '</h6>');
 
 });
 $(".crystal3").click(function () {
-	$('#player').html('<h6>' + cryValue3 + '</h6>');
+	var score3 = yourNumber += cryValue3;
+	$('#player').html('<h6>' + score3 + '</h6>');
 
 });
 $(".crystal4").click(function () {
-	$('#player').html('<h6>' + cryValue4 + '</h6>');
+	var score4 = yourNumber += cryValue4;
+	$('#player').html('<h6>' + score4 + '</h6>');
 
 });
+	
+	if (yourNumber == randomNumberFromRange) {
+		yourWins++;
+		$('#wins').html('<h6>' + yourWins + '</h6>');
+		
+	}
 });
